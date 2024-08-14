@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.card1{
+    width: 340px;
+    height: 170px;
+    float: left;
+    perspective: 1000px;
+}
+
+.card1 .frente1{
+    position: absolute;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+}
+
+.card1 .fundo1{
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+    filter: grayscale(100%);
+}
+
+.card1:hover .frente1{
+    transform: rotateY(-180deg);
+    cursor: pointer;
+}
+
+.card1:hover .fundo1{
+    transform: rotateY(0deg);
+    cursor: pointer;
+}
+
+.card1 h2{
+    background-color: black;
+    color: wheat;
+    width: 100%;
+    bottom: 30px;
+    position: absolute;
+    opacity: 0.7;
+    text-align: center;
+}
